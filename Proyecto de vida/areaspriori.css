@@ -1,0 +1,219 @@
+/* Estilos generales para el cuerpo de la página */
+body {
+    font-family: Arial, sans-serif; /* Fuente utilizada para el texto */
+    margin: 0; /* Elimina el margen por defecto del navegador */
+    padding: 0; /* Elimina el padding por defecto del navegador */
+    background-color: #85d05c; /* Color de fondo de la página */
+
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Cambiar tipografía */
+    line-height: 1.6; /* Mejora la legibilidad */
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #2A2A3A; /* Color de fondo del encabezado */
+    padding: 10px 340px; /* Espacio interno (padding) en el encabezado */
+    color: white; /* Color del texto en el encabezado */
+    display: flex; /* Usa flexbox para el diseño */
+    justify-content: space-between; /* Espacio entre elementos en el encabezado */
+    align-items: center; /* Alinea verticalmente los elementos en el centro */
+    height: 50px; /* Altura del encabezado */
+}
+
+/* Estilos para la barra de navegación */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #2A2A3A;
+    overflow: hidden;
+    display: flex; /* Usamos Flexbox para alinear */
+    justify-content: center; /* Centrar los elementos horizontalmente */
+    align-items: center; /* Alinearlos verticalmente */
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+}
+
+nav ul li {
+    margin: 0 10px;
+    list-style: none;
+}
+
+/* Enlaces de navegación */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px 20px;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #2D2D2D;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    background-color: #B3C5E6;
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Adaptabilidad para móviles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Cambia a una lista vertical en móviles */
+        align-items: flex-start; /* Alinear a la izquierda en pantallas pequeñas */
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        width: 100%;
+        display: block;
+    }
+}
+
+h1 {
+    font-size: 2.5em; /* Tamaño de la fuente */
+    font-family: 'Georgia', serif; /* Tipografía */
+    color: #f9f9f9; /* Color del texto */
+    text-align: center; /* Centrado */
+    
+    /* Ajusta la caja */
+    margin: 20px auto; /* Centra horizontalmente y deja espacio arriba/abajo */
+    padding: 5px 10px; /* Reduce el espacio dentro de la caja (padding) */
+    width: 60%; /* Ajusta el ancho de la caja al 60% del contenedor */
+
+    background: linear-gradient(90deg, rgba(43, 106, 9  ), rgba(43, 106, 9 )); /* Fondo degradado */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15); /* Sombra */
+    
+    border: 1px solid #1a3d5f; /* Borde */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.subtitulo {
+    font-size: 1.2em; /* Aumenta el tamaño de la fuente */
+    color: white; /* Gris oscuro para un contraste suave */
+    background: linear-gradient(90deg, rgba(49, 119, 11  ), rgba(49, 119, 11 )); /* Degradado suave en tonos azul claro */
+    padding: 15px 20px; /* Añadir padding para crear más espacio alrededor del texto */
+    border-left: 5px solid #4682b4; /* Borde izquierdo azul moderado */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar profundidad */
+    margin-top: 20px; /* Añadir espacio entre el título y el párrafo */
+    text-align: justify; /* Justificar el texto para una mejor presentación */
+}
+
+
+/* Contenedor de tarjetas con estilo creativo */
+.Proyecto .cartaIN {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 30px;
+    align-items: stretch; /* Asegura que todas las tarjetas tengan la misma altura */
+}
+
+/* Tarjetas */
+.Proyecto .tarjeta {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    width: 40%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Mantiene imagen en la parte superior */
+    min-height: 300px; /* Mantiene altura mínima */
+}
+
+
+/* Efecto al pasar el cursor sobre las tarjetas */
+.Proyecto .tarjeta:hover {
+    transform: scale(1.05); /* Ya no rota, solo crece ligeramente */
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.Proyecto .tarjeta img {
+    max-width: 100%; /* Permite que la imagen ocupe el ancho disponible */
+    max-height: 150px; /* Mantiene la limitación de altura */
+    object-fit: contain; /* Evita el recorte */
+    display: block;
+    margin: auto;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+
+/* Efecto en imágenes al pasar el cursor */
+.Proyecto .tarjeta:hover img {
+    transform: scale(1.1);
+}
+
+/* Títulos dentro de las tarjetas */
+.Proyecto .tarjeta h2 {
+    font-size: 1.8em;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.Proyecto .tarjeta:hover h2 {
+    color: #0057b8;
+}
+
+/* Texto descriptivo */
+.Proyecto .tarjeta p {
+    font-size: 1em;
+    color: #555;
+    text-align: justify;
+    margin-top: 10px;
+}
+
+
+
+    .creencias, .principios {
+        width: 300px;
+        height: 200px;
+        background-color: #D8DEE9;
+    }
+
+    /* Corrección del footer */
+.footer {
+    height: 120px;
+    width: 100%;
+    background-color: #1a3d5f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    box-sizing: border-box;
+}
+
+/* Iconos sociales en el footer */
+.social-icons {
+    margin: 10px 0;
+}
+
+.social-icons a {
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+}

@@ -1,0 +1,185 @@
+/* Estilos para el encabezado */
+header {
+    background-color: #2A2A3A;
+    padding: 10px 340px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+     margin-top: 0; /* Asegura que esté pegado a la parte superior */
+}
+
+
+/* Estilos para la barra de navegación */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #2A2A3A;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+}
+
+nav ul li {
+    margin: 0 10px;
+    list-style: none;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px 20px;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #2D2D2D;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    background-color: #B3C5E6;
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Adaptabilidad para móviles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+    nav ul li a {
+        width: 100%;
+        display: block;
+    }
+}
+
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-inline-size: 100%;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #070707;
+  padding: 3rem;
+  background: fixed linear-gradient(#070707, #070707 6px, transparent 6px, transparent),
+    fixed linear-gradient(transparent, #fff 90%),
+    fixed repeating-linear-gradient(#efefef, #efefef 1px, transparent 1px, transparent 40px),
+    fixed repeating-linear-gradient(to right, #efefef, #efefef 1px, transparent 1px, transparent 40px) white;
+}
+
+h1 {
+    font-size: 2.5em; /* Tamaño de la fuente */
+    font-family: 'Georgia', serif; /* Tipografía */
+    color: #f9f9f9; /* Color del texto */
+    text-align: center; /* Centrado */
+    
+    /* Ajusta la caja */
+    margin: 20px auto; /* Centra horizontalmente y deja espacio arriba/abajo */
+    padding: 5px 10px; /* Reduce el espacio dentro de la caja (padding) */
+    width: 60%; /* Ajusta el ancho de la caja al 60% del contenedor */
+
+    background: linear-gradient(90deg, rgba(244, 193, 48 ), rgba(244, 193, 48 )); /* Fondo degradado */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15); /* Sombra */
+    
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+/* Estilos para el collage */
+.collage {
+  max-width: 900px;
+  margin-inline: auto;
+  display: grid;
+  gap: 0.7rem;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-areas:
+    "..   two two    two    three  four ..    .."
+    "one  two two    two    five   five six   .."
+    "..   two two    two    five   five seven eight"
+    "nine ten eleven eleven twelve ..   ..    .."
+    "..   ..  eleven eleven ..     ..   ..    ..";
+}
+
+.collage > div {
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.collage img {
+  width: 170%; /* Aumenta el tamaño de las imágenes */
+  aspect-ratio: 1;
+  display: block;
+  object-fit: cover;
+  transition: all 0.5s ease-in-out;
+}
+
+.collage img:hover {
+  scale: 1.15;
+  rotate: 3deg;
+}
+
+/* Asignación de áreas */
+.collage :nth-child(1) { grid-area: one; }
+.collage :nth-child(2) { grid-area: two; }
+.collage :nth-child(3) { grid-area: three; }
+.collage :nth-child(4) { grid-area: four; background-color: #ffecc3; border-bottom-right-radius: 100%; }
+.collage :nth-child(5) { grid-area: five; }
+.collage :nth-child(6) { grid-area: six; background-color: #ccf0ee; border-top-right-radius: 100%; }
+.collage :nth-child(7) { grid-area: seven; }
+.collage :nth-child(8) { grid-area: eight; background-color: #cdd7f0; border-radius: 100%; }
+.collage :nth-child(9) { grid-area: nine; background-color: #ffdce0; border-top-left-radius: 100%; }
+.collage :nth-child(10) { grid-area: ten; }
+.collage :nth-child(11) { grid-area: eleven; }
+.collage :nth-child(12) { grid-area: twelve; }
+
+
+.footer {
+    width: 100%;
+    height: 50px;
+    background-color: #1a3d5f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+  bottom: 0;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+}
+
+/* Iconos sociales en el footer */
+.social-icons {
+    margin: 10px 0;
+}
+
+.social-icons a {
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+}
