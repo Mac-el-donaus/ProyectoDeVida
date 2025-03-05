@@ -1,0 +1,244 @@
+/* Estilos generales para el cuerpo de la página */
+body {
+    font-family: Arial, sans-serif; /* Fuente utilizada para el texto */
+    margin: 0; /* Elimina el margen por defecto del navegador */
+    padding: 0; /* Elimina el padding por defecto del navegador */
+    background-color: #62b1ec ; /* Color de fondo de la página */
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #2A2A3A; /* Color de fondo del encabezado */
+    padding: 10px 340px; /* Espacio interno (padding) en el encabezado */
+    color: white; /* Color del texto en el encabezado */
+    display: flex; /* Usa flexbox para el diseño */
+    justify-content: space-between; /* Espacio entre elementos en el encabezado */
+    align-items: center; /* Alinea verticalmente los elementos en el centro */
+    height: 50px; /* Altura del encabezado */
+}
+
+/* Estilos para la barra de navegación */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #2A2A3A;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+}
+
+nav ul li {
+    margin: 0 10px;
+    list-style: none;
+}
+
+/* Enlaces de navegación */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px 20px;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #2D2D2D;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    background-color: #B3C5E6;
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Adaptabilidad para móviles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+    nav ul li a {
+        width: 100%;
+        display: block;
+    }
+}
+
+h1 {
+    font-size: 2.5em; /* Tamaño de la fuente */
+    font-family: 'Georgia', serif; /* Tipografía */
+    color: #f9f9f9; /* Color del texto */
+    text-align: center; /* Centrado */
+    margin: 20px auto; /* Centra horizontalmente y deja espacio arriba/abajo */
+    padding: 5px 10px; /* Reduce el espacio dentro de la caja (padding) */
+    width: 60%; /* Ajusta el ancho de la caja al 60% del contenedor */
+    background: linear-gradient(90deg, rgba(244, 193, 48 ), rgba(244, 193, 48 )); /* Fondo degradado */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15); /* Sombra */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+/* Corrección de subtítulos flotantes */
+.subtitulo, .subtitulo2 {
+    font-size: 1.2em;
+    color: #466988;
+    background: linear-gradient(90deg, rgba(173, 216, 230, 0.1), rgba(70, 130, 180, 0.1));
+    padding: 20px;
+    border-left: 5px solid #000000;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    text-align: justify;
+    width: 45%;
+}
+
+.subtitulo {
+    float: right;
+    margin-left: 20px;
+    background-color: white;
+}
+
+.subtitulo2 {
+    float: left;
+    margin-right: 20px;
+    background-color: white;
+}
+
+.subtitulo, .subtitulo2 {
+    width: 50%; /* Antes era 45%, ahora ocupa más espacio */
+    font-size: 1.3em; /* Aumenta un poco el tamaño del texto */
+    line-height: 1.6; /* Mejora la legibilidad del texto */
+}
+
+/* Estilos para las tarjetas */
+.Proyecto .tarjeta, .Proyecto .tarjeta2 {
+    width: 275px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    margin-left: 375px; /* Ajusta este valor según sea necesario */
+}
+
+.Proyecto .tarjeta:hover, .Proyecto .tarjeta2:hover {
+    transform: scale(1.08);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.Proyecto .tarjeta img, .Proyecto .tarjeta2 img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.Proyecto .tarjeta:hover img, .Proyecto .tarjeta2:hover img {
+    transform: scale(1.1);
+}
+
+/* Contenedor principal de las tarjetas */
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se acomoden en varias filas */
+    justify-content: space-between; /* Espacio entre las tarjetas */
+    gap: 30px; /* Espacio entre las tarjetas */
+    padding: 20px;
+} 
+/* Tarjetas */
+.Proyecto .tarjeta { 
+    background-color: white;
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    width: 250px; /* Ajusta el ancho de las tarjetas */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px; /* Asegura que las tarjetas tengan la misma altura mínima */
+}
+
+/* Efecto al pasar el cursor sobre las tarjetas */
+.Proyecto .tarjeta:hover {
+    transform: scale(1.05); /* Ya no rota, solo crece ligeramente */
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Imágenes dentro de las tarjetas */
+.Proyecto .tarjeta img {
+    width: 80%;
+    max-height: 150px; /* Ajusta el tamaño de las imágenes */
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto en imágenes al pasar el cursor */
+.Proyecto .tarjeta:hover img {
+    transform: scale(1.1);
+}
+
+/* Títulos dentro de las tarjetas */
+.Proyecto .tarjeta h2 {
+    font-size: 1.8em;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.Proyecto .tarjeta:hover h2 {
+    color: #0057b8;
+}
+
+/* Texto descriptivo */
+.Proyecto .tarjeta p {
+    font-size: 1em;
+    color: #555;
+    text-align: justify;
+    margin-top: 10px;
+}
+
+.creencias, .principios {
+    width: 300px;
+    height: 200px;
+    background-color: #D8DEE9;
+}
+
+/* Corrección del footer */
+.footer {
+    width: 100%;
+    background-color: #1a3d5f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    box-sizing: border-box;
+}
+
+/* Iconos sociales en el footer */
+.social-icons {
+    margin: 10px 0;
+}
+
+.social-icons a {
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+}
